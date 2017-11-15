@@ -1,12 +1,12 @@
 <div class="container">
   <dl>
     <dt>Student</dt>
-    <dd>{{name}}</dd>
+    <dd>{{student.name}}</dd>
   </dl>
-  <div class="is-jedi" [hidden]="!isJedi">
+  <div class="is-jedi" [hidden]="!student.isJedi">
     <dl>
       <dt>Jedi Temple</dt>
-      <dd>Coruscant</dd>
+      <dd>{{student.temple}}</dd>
     </dl>
   </div>
 </div>

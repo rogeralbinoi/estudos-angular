@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Student } from './student.model'
 
 @Component({
   selector: 'jad-student',
@@ -6,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./student.component.styl']
 })
 export class StudentComponent implements OnInit {
-  @Input() name = ''
-  @Input() isJedi = false
+
+  @Input() student: Student
 
   constructor() { }
 
