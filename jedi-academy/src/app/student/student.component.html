@@ -1,12 +1,16 @@
-<div class="container">
+<div *ngIf="student" class="container">
   <dl>
     <dt>Student</dt>
-    <dd>{{student.name}}</dd>
+    <dd>{{student?.name}}</dd>
   </dl>
-  <div class="is-jedi" *ngIf="student.isJedi">
+  <div class="is-jedi" *ngIf="student?.isJedi">
     <dl>
       <dt>Jedi Temple</dt>
-      <dd>{{student.temple}}</dd>
+      <dd>{{student?.temple}}</dd>
     </dl>
   </div>
+</div>
+
+<div *ngIf="!student" class="container">
+  Nothing here!
 </div>
