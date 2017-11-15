@@ -1,7 +1,11 @@
 <div *ngIf="student" class="container">
   <dl>
     <dt>Student</dt>
-    <dd>{{student?.name}}</dd>
+    <dd>
+      <a href="#" (click)="clicked($event, student?.name, description)">{{student?.name}}</a>
+      <button (click)="description.focus()">Focus</button>
+      <textarea #description></textarea>
+    </dd>
   </dl>
   <div class="is-jedi" *ngIf="student?.isJedi">
     <dl>
